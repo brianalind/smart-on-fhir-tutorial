@@ -10,7 +10,7 @@
     function onReady(smart)  {
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
-        var displayPatient = smart.need_patient_banner;
+        window.displayPatient = smart.need_patient_banner;
         var pt = patient.read();
         var obv = smart.patient.api.fetchAll({
                     type: 'Observation',
@@ -117,7 +117,7 @@
 
   window.drawVisualization = function(p) {
     $('#holder').show();
-    if (displayPatient) {
+    if (window.displayPatient) {
       $('patient').show();
     } else {
        $('patient').hide();
