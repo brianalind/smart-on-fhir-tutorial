@@ -10,7 +10,7 @@
     function onReady(smart)  {
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
-        window.displayPatient = smart.need_patient_banner;
+        window.displayPatient = smart.tokenResponse.need_patient_banner;
         var pt = patient.read();
         var obv = smart.patient.api.fetchAll({
                     type: 'Observation',
