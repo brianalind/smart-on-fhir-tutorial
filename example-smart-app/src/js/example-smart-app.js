@@ -118,9 +118,9 @@
   window.drawVisualization = function(p) {
     $('#holder').show();
     if (window.displayPatient) {
-      $('patient').show();
+      $('#patient').show();
     } else {
-       $('patient').hide();
+       $('#patient').hide();
     }
     $('#loading').hide();
     $('#fname').html(p.fname);
